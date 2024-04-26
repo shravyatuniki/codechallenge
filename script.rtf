@@ -1,0 +1,159 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.22621}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 6616359a92e8371c6b887f67:~/environment $ aws s3 mb s3://:data\par
+make_bucket failed: s3://:data Parameter validation failed:\par
+Invalid bucket name ":data": Bucket name must match the regex "^[a-zA-Z0-9.\\-_]\{1,255\}$" or be an ARN matching the regex "^arn:(aws).*:(s3|s3-object-lambda):[a-z\\-0-9]*:[0-9]\{12\}:accesspoint[/:][a-zA-Z0-9\\-.]\{1,63\}$|^arn:(aws).*:s3-outposts:[a-z\\-0-9]+:[0-9]\{12\}:outpost[/:][a-zA-Z0-9\\-]\{1,63\}[/:]accesspoint[/:][a-zA-Z0-9\\-]\{1,63\}$"\par
+6616359a92e8371c6b887f67:~/environment $ aws s3 mb s3://intdata\par
+make_bucket failed: s3://intdata An error occurred (AccessDenied) when calling the CreateBucket operation: Access Denied\par
+6616359a92e8371c6b887f67:~/environment $ aws glue create-database --database-input\par
+\par
+usage: aws [options] <command> <subcommand> [<subcommand> ...] [parameters]\par
+To see help text, you can run:\par
+\par
+  aws help\par
+  aws <command> help\par
+  aws <command> <subcommand> help\par
+\par
+6616359a92e8371c6b887f67:~/environment $ aws s3 mb s3://:data\par
+make_bucket failed: s3://:data Parameter validation failed:\par
+Invalid bucket name ":data": Bucket name must match the regex "^[a-zA-Z0-9.\\-_]\{1,255\}$" or be an ARN matching the regex "^arn:(aws).*:(s3|s3-object-lambda):[a-z\\-0-9]*:[0-9]\{12\}:accesspoint[/:][a-zA-Z0-9\\-.]\{1,63\}$|^arn:(aws).*:s3-outposts:[a-z\\-0-9]+:[0-9]\{12\}:outpost[/:][a-zA-Z0-9\\-]\{1,63\}[/:]accesspoint[/:][a-zA-Z0-9\\-]\{1,63\}$"\par
+6616359a92e8371c6b887f67:~/environment $ aws s3 mb s3://intdata\par
+make_bucket failed: s3://intdata An error occurred (AccessDenied) when calling the CreateBucket operation: Access Denied\par
+6616359a92e8371c6b887f67:~/environment $ aws glue create-database --database-input\par
+\par
+usage: aws [options] <command> <subcommand> [<subcommand> ...] [parameters]\par
+To see help text, you can run:\par
+\par
+  aws help\par
+  aws <command> help\par
+  aws <command> <subcommand> help\par
+\par
+aws: error: argument --database-input: expected one argument\par
+\par
+\par
+6616359a92e8371c6b887f67:~/environment $ aws glue create-database --database-input '\{"Name": "Datastint"\}'\par
+\par
+An error occurred (AccessDeniedException) when calling the CreateDatabase operation: User: arn:aws:iam::533267381770:user/6616359a92e8371c6b887f67 is not authorized to perform: glue:CreateDatabase on resource: arn:aws:glue:us-east-1:533267381770:catalog because no identity-based policy allows the glue:CreateDatabase action\par
+6616359a92e8371c6b887f67:~/environment $ aws glue crawler-datastcraw --Datastrint--targets '\{"s3targets":[\{"path":"s3://intdata"\}]\}\par
+> '\par
+\par
+usage: aws [options] <command> <subcommand> [<subcommand> ...] [parameters]\par
+To see help text, you can run:\par
+\par
+  aws help\par
+  aws <command> help\par
+  aws <command> <subcommand> help\par
+\par
+aws: error: argument operation: Invalid choice, valid choices are:\par
+\par
+batch-create-partition                   | batch-delete-connection                 \par
+batch-delete-partition                   | batch-delete-table                      \par
+batch-delete-table-version               | batch-get-blueprints                    \par
+batch-get-crawlers                       | batch-get-custom-entity-types           \par
+batch-get-data-quality-result            | batch-get-dev-endpoints                 \par
+batch-get-jobs                           | batch-get-partition                     \par
+batch-get-table-optimizer                | batch-get-triggers                      \par
+batch-get-workflows                      | batch-stop-job-run                      \par
+batch-update-partition                   | cancel-data-quality-rule-recommendation-run\par
+cancel-data-quality-ruleset-evaluation-run | cancel-ml-task-run                      \par
+cancel-statement                         | check-schema-version-validity           \par
+create-blueprint                         | create-classifier                       \par
+create-connection                        | create-crawler                          \par
+create-custom-entity-type                | create-data-quality-ruleset             \par
+create-database                          | create-dev-endpoint                     \par
+create-job                               | create-ml-transform                     \par
+create-partition                         | create-partition-index                  \par
+create-registry                          | create-schema                           \par
+create-script                            | create-security-configuration           \par
+create-session                           | create-table                            \par
+create-table-optimizer                   | create-trigger                          \par
+create-user-defined-function             | create-workflow                         \par
+delete-blueprint                         | delete-classifier                       \par
+delete-column-statistics-for-partition   | delete-column-statistics-for-table      \par
+delete-connection                        | delete-crawler                          \par
+delete-custom-entity-type                | delete-data-quality-ruleset             \par
+delete-database                          | delete-dev-endpoint                     \par
+delete-job                               | delete-ml-transform                     \par
+delete-partition                         | delete-partition-index                  \par
+delete-registry                          | delete-resource-policy                  \par
+delete-schema                            | delete-schema-versions                  \par
+delete-security-configuration            | delete-session                          \par
+delete-table                             | delete-table-optimizer                  \par
+delete-table-version                     | delete-trigger                          \par
+delete-user-defined-function             | delete-workflow                         \par
+get-blueprint                            | get-blueprint-run                       \par
+get-blueprint-runs                       | get-catalog-import-status               \par
+get-classifier                           | get-classifiers                         \par
+get-column-statistics-for-partition      | get-column-statistics-for-table         \par
+get-column-statistics-task-run           | get-column-statistics-task-runs         \par
+get-connection                           | get-connections                         \par
+get-crawler                              | get-crawler-metrics                     \par
+get-crawlers                             | get-custom-entity-type                  \par
+get-data-catalog-encryption-settings     | get-data-quality-result                 \par
+get-data-quality-rule-recommendation-run | get-data-quality-ruleset                \par
+get-data-quality-ruleset-evaluation-run  | get-database                            \par
+get-databases                            | get-dataflow-graph                      \par
+get-dev-endpoint                         | get-dev-endpoints                       \par
+get-job                                  | get-job-bookmark                        \par
+get-job-run                              | get-job-runs                            \par
+get-jobs                                 | get-ml-task-run                         \par
+get-ml-task-runs                         | get-ml-transform                        \par
+get-ml-transforms                        | get-mapping                             \par
+get-partition                            | get-partition-indexes                   \par
+get-partitions                           | get-plan                                \par
+get-registry                             | get-resource-policies                   \par
+get-resource-policy                      | get-schema                              \par
+get-schema-by-definition                 | get-schema-version                      \par
+get-schema-versions-diff                 | get-security-configuration              \par
+get-security-configurations              | get-session                             \par
+get-statement                            | get-table                               \par
+get-table-optimizer                      | get-table-version                       \par
+get-table-versions                       | get-tables                              \par
+get-tags                                 | get-trigger                             \par
+get-triggers                             | get-unfiltered-partition-metadata       \par
+get-unfiltered-partitions-metadata       | get-unfiltered-table-metadata           \par
+get-user-defined-function                | get-user-defined-functions              \par
+get-workflow                             | get-workflow-run                        \par
+get-workflow-run-properties              | get-workflow-runs                       \par
+import-catalog-to-glue                   | list-blueprints                         \par
+list-column-statistics-task-runs         | list-crawlers                           \par
+list-crawls                              | list-custom-entity-types                \par
+list-data-quality-results                | list-data-quality-rule-recommendation-runs\par
+list-data-quality-ruleset-evaluation-runs | list-data-quality-rulesets              \par
+list-dev-endpoints                       | list-jobs                               \par
+list-ml-transforms                       | list-registries                         \par
+list-schema-versions                     | list-schemas                            \par
+list-sessions                            | list-statements                         \par
+list-table-optimizer-runs                | list-triggers                           \par
+list-workflows                           | put-data-catalog-encryption-settings    \par
+put-resource-policy                      | put-schema-version-metadata             \par
+put-workflow-run-properties              | query-schema-version-metadata           \par
+register-schema-version                  | remove-schema-version-metadata          \par
+reset-job-bookmark                       | resume-workflow-run                     \par
+run-statement                            | search-tables                           \par
+start-blueprint-run                      | start-column-statistics-task-run        \par
+start-crawler                            | start-crawler-schedule                  \par
+start-data-quality-rule-recommendation-run | start-data-quality-ruleset-evaluation-run\par
+start-export-labels-task-run             | start-import-labels-task-run            \par
+start-job-run                            | start-ml-evaluation-task-run            \par
+start-ml-labeling-set-generation-task-run | start-trigger                           \par
+start-workflow-run                       | stop-column-statistics-task-run         \par
+stop-crawler                             | stop-crawler-schedule                   \par
+stop-session                             | stop-trigger                            \par
+stop-workflow-run                        | tag-resource                            \par
+untag-resource                           | update-blueprint                        \par
+update-classifier                        | update-column-statistics-for-partition  \par
+update-column-statistics-for-table       | update-connection                       \par
+update-crawler                           | update-crawler-schedule                 \par
+update-data-quality-ruleset              | update-database                         \par
+update-dev-endpoint                      | update-job                              \par
+update-job-from-source-control           | update-ml-transform                     \par
+update-partition                         | update-registry                         \par
+update-schema                            | update-source-control-from-job          \par
+update-table                             | update-table-optimizer                  \par
+update-trigger                           | update-user-defined-function            \par
+update-workflow                          | help                                    \par
+\par
+\par
+}
+ 
